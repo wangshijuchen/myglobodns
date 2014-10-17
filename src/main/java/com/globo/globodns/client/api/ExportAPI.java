@@ -43,7 +43,7 @@ public class ExportAPI extends AbstractAPI<Export> {
 	}
 	
 	public Export scheduleExport() throws GloboDnsException {
-		GloboDnsRoot<Export> globoDnsRoot = this.post("/bind9/schedule_export.json", null, false);
+		GloboDnsRoot<Export> globoDnsRoot = this.post("/bind9/export", null, false);
 		if (globoDnsRoot == null) {
 			throw new GloboDnsException("Invalid response");
 		}
